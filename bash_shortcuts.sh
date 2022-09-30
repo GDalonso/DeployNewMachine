@@ -151,7 +151,7 @@ precommitrunall(){
 }
 
 ####################################################################################
-
+#Bash
 bashhistory(){
     cat ~/.bash_history
 }
@@ -167,6 +167,7 @@ bashhistorygrep(){
 
 }
 
+#SMB
 smbconfig(){
     sudo nano /etc/samba/smb.conf
 }
