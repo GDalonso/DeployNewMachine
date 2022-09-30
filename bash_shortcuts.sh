@@ -55,6 +55,30 @@ gcb(){
     fi
 }
 
+gad(){
+    git add .
+}
+
+gap(){
+    git add -p
+}
+
+gcmessage(){
+    if [ $1 ]; then
+        echo $1
+        git commit -m $1
+    else
+        echo "type the commit message"
+        read message
+        echo $MESSAGE
+        git commit -m $MESSAGE
+    fi
+}
+
+gcd(){
+    git commit -m .
+}
+
 ####################################################################################
 #Docker
 
@@ -141,4 +165,11 @@ bashhistorygrep(){
         cat ~/.bash_history | grep $FILTER
     fi
 
+}
+
+smbconfig(){
+    sudo nano /etc/samba/smb.conf
+}
+smbrestart(){
+    sudo service smbd restart
 }
