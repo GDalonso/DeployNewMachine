@@ -152,6 +152,10 @@ precommitrunall(){
 
 ####################################################################################
 #Bash
+bashsource(){
+    source ~/.bashrc
+}
+
 bashhistory(){
     cat ~/.bash_history
 }
