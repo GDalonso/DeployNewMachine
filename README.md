@@ -1,4 +1,9 @@
-# LinuxDeploy
+
+# Adding shortcuts
+`cat bash_shortcuts >> ~/.bashrc`
+
+
+# basic_setup
 Script that install and configure basic applications that i need when migrating or reinstalling a Debian based OS.
 
 This script installs:
