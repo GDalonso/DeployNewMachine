@@ -64,12 +64,11 @@ gap(){
 }
 
 gcmessage(){
-    if [ $1 ]; then
-        echo $1
-        git commit -m $1
+    if [ "$@" ]; then
+        echo "$@"
+        git commit -m "$@"
     else
-        echo "type the commit message"
-        read message
+        read -p "type the commit message: " MESSAGE
         echo $MESSAGE
         git commit -m $MESSAGE
     fi
