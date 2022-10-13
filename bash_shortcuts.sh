@@ -78,6 +78,12 @@ gcd(){
     git commit -m .
 }
 
+gitsquash(){
+    git reset $(git merge-base master $(git branch --show-current))
+    git add -A
+}
+
+
 ####################################################################################
 #Docker
 
