@@ -79,10 +79,13 @@ gcd(){
 }
 
 gitsquash(){
-    git reset $(git merge-base master $(git branch --show-current))
-    git add -A
+    if [ "$@" ]; then
+        git reset $(git merge-base "$@" $(git branch --show-current))
+        git add -A
+    else
+        echo "inform the main branch name: usage gitsquash master or gitsquash dev"
+    fi
 }
-
 
 ####################################################################################
 #Docker
